@@ -1,192 +1,756 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roger's Diner | Menú Digital</title>
+  <title>Roger's Diner - Menú Digital Completo</title>
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            diner: {
+              bg: '#0c0b14',
+              card: '#181624',
+              border: '#29263c',
+              pink: '#ff2a75',
+              cyan: '#00f0ff',
+              yellow: '#ffb703',
+              purple: '#9d4edd'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap');
+    body {
+      font-family: 'Outfit', sans-serif;
+    }
+    .neon-text-pink {
+      text-shadow: 0 0 12px rgba(255, 42, 117, 0.6), 0 0 24px rgba(255, 42, 117, 0.3);
+    }
+    .neon-text-cyan {
+      text-shadow: 0 0 12px rgba(0, 240, 255, 0.6), 0 0 24px rgba(0, 240, 255, 0.3);
+    }
+    .neon-border-pink {
+      box-shadow: 0 0 15px rgba(255, 42, 117, 0.2);
+    }
+    .neon-border-cyan {
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans pb-24">
+<body class="bg-diner-bg text-slate-100 min-h-screen pb-28 border-t-4 border-diner-pink">
 
-  <!-- ENCABEZADO / INFORMACIÓN DEL LOCAL -->
-  <header class="bg-slate-900 border-b border-pink-500/30 sticky top-0 z-40 backdrop-blur-md bg-opacity-90">
-    <div class="max-w-4xl mx-auto px-4 py-4">
-      <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
-        <div>
-          <h1 class="text-2xl font-black text-pink-500 tracking-wider uppercase">ROGER'S DINER</h1>
-          <p class="text-xs text-cyan-400 font-semibold uppercase tracking-widest">Cócteles & Food · Good Times!</p>
-        </div>
-        
-        <!-- CONTACTO Y DIRECCIÓN -->
-        <div class="flex flex-wrap items-center gap-3 text-xs">
-          <a href="https://maps.google.com/?q=Cl.+51+Sur+%2387-18,+Bogot%C3%A1" target="_blank" class="flex items-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 px-3 py-1.5 rounded-lg border border-slate-700 transition">
-            <i class="fa-solid fa-location-dot text-pink-500"></i>
-            <span>Cl. 51 Sur #87-18, Bogotá</span>
-          </a>
-          <a href="https://wa.me/573215484976" target="_blank" class="flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3 py-1.5 rounded-lg transition">
-            <i class="fa-brands fa-whatsapp text-sm"></i>
-            <span>321 548 4976</span>
-          </a>
-        </div>
+  <!-- ENCABEZADO Y DATOS DEL NEGOCIO -->
+  <header class="bg-gradient-to-b from-diner-card to-diner-bg border-b border-diner-border pt-8 pb-6 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Logo Retro / Título -->
+      <div class="inline-block relative mb-2">
+        <span class="text-xs tracking-[0.3em] font-extrabold text-diner-cyan uppercase block mb-1">Diner Classic & Bar</span>
+        <h1 class="text-4xl md:text-5xl font-black tracking-tight text-white uppercase italic transform -rotate-1 neon-text-pink">
+          ROGER'S <span class="text-diner-pink">DINER</span>
+        </h1>
+      </div>
+      <p class="text-diner-yellow font-bold text-xs md:text-sm tracking-widest uppercase mb-4">★ Food, Drinks & Good Times! ★</p>
+
+      <!-- Información de Contacto y Dirección -->
+      <div class="flex flex-wrap justify-center items-center gap-3 text-xs md:text-sm text-slate-300">
+        <a href="https://maps.google.com/?q=Cl.+51+Sur+%2387-18,+Bogot%C3%A1" target="_blank" rel="noopener" class="flex items-center gap-1.5 bg-diner-bg/80 border border-diner-border px-3.5 py-1.5 rounded-full hover:border-diner-pink transition">
+          <i class="fa-solid fa-location-dot text-diner-pink"></i>
+          <span>Cl. 51 Sur #87-18, Bogotá</span>
+        </a>
+        <a href="tel:3215484976" class="flex items-center gap-1.5 bg-diner-bg/80 border border-diner-border px-3.5 py-1.5 rounded-full hover:border-diner-cyan transition">
+          <i class="fa-solid fa-phone text-diner-cyan"></i>
+          <span>321 548 4976</span>
+        </a>
+        <a href="https://wa.me/573215484976" target="_blank" rel="noopener" class="flex items-center gap-1.5 bg-emerald-950/40 border border-emerald-500/40 text-emerald-400 px-3.5 py-1.5 rounded-full hover:bg-emerald-900/40 transition">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>Pedidos WhatsApp</span>
+        </a>
       </div>
     </div>
   </header>
 
+  <!-- NAVEGACIÓN DE CATEGORÍAS (Sticky Filter) -->
+  <nav class="sticky top-0 z-40 bg-diner-bg/95 backdrop-blur-md border-b border-diner-border py-3 px-4 shadow-xl">
+    <div class="max-w-4xl mx-auto flex gap-2 overflow-x-auto hide-scrollbar text-xs md:text-sm font-bold">
+      <button onclick="filterCategory('todos')" class="cat-btn active bg-diner-pink text-slate-950 px-4 py-2 rounded-xl whitespace-nowrap transition font-extrabold">
+        Todos
+      </button>
+      <button onclick="filterCategory('bebidas')" class="cat-btn bg-diner-card border border-diner-border text-slate-300 px-4 py-2 rounded-xl whitespace-nowrap hover:border-diner-cyan transition">
+        🥤 Bebidas de la Casa
+      </button>
+      <button onclick="filterCategory('sodas')" class="cat-btn bg-diner-card border border-diner-border text-slate-300 px-4 py-2 rounded-xl whitespace-nowrap hover:border-diner-cyan transition">
+        ✨ Sodas & Jugos
+      </button>
+      <button onclick="filterCategory('entradas')" class="cat-btn bg-diner-card border border-diner-border text-slate-300 px-4 py-2 rounded-xl whitespace-nowrap hover:border-diner-pink transition">
+        🔥 Entradas & Picar
+      </button>
+      <button onclick="filterCategory('salchipapas')" class="cat-btn bg-diner-card border border-diner-border text-slate-300 px-4 py-2 rounded-xl whitespace-nowrap hover:border-diner-pink transition">
+        🍟 Salchipapas
+      </button>
+      <button onclick="filterCategory('otras-entradas')" class="cat-btn bg-diner-card border border-diner-border text-slate-300 px-4 py-2 rounded-xl whitespace-nowrap hover:border-diner-pink transition">
+        🥟 Otras Entradas
+      </button>
+      <button onclick="filterCategory('acomp')" class="cat-btn bg-diner-card border border-diner-border text-slate-300 px-4 py-2 rounded-xl whitespace-nowrap hover:border-diner-pink transition">
+        🧀 Acompañantes
+      </button>
+      <button onclick="filterCategory('cocteles')" class="cat-btn bg-diner-card border border-diner-border text-slate-300 px-4 py-2 rounded-xl whitespace-nowrap hover:border-diner-purple transition">
+        🍹 Cócteles
+      </button>
+    </div>
+  </nav>
+
   <!-- CONTENIDO PRINCIPAL DEL MENÚ -->
-  <main class="max-w-4xl mx-auto px-4 py-8 space-y-10">
+  <main class="max-w-4xl mx-auto px-4 py-6 space-y-10">
+
+    <!-- SECCIÓN: BEBIDAS DE LA CASA (NUEVO MENÚ) -->
+    <section id="sec-bebidas" class="menu-section space-y-4">
+      <div class="border-b border-diner-cyan/40 pb-2 flex justify-between items-end">
+        <div>
+          <span class="text-diner-cyan font-bold text-xs uppercase tracking-widest block">Refrescantes & Especiales</span>
+          <h2 class="text-2xl font-black uppercase tracking-wider text-white flex items-center gap-2">
+            <i class="fa-solid fa-glass-water text-diner-cyan"></i> Bebidas de la Casa
+          </h2>
+        </div>
+        <span class="text-xs text-diner-yellow font-extrabold uppercase bg-diner-yellow/10 border border-diner-yellow/30 px-2.5 py-1 rounded-lg">
+          ★ Especiales Roger's ★
+        </span>
+      </div>
+
+      <!-- TOPS BEBIDAS DE LA CASA -->
+      <div class="grid md:grid-cols-3 gap-4">
+
+        <!-- TOP 1: Explosión Roger's -->
+        <div class="menu-item bg-diner-card border border-diner-pink/60 rounded-2xl p-4 relative neon-border-pink flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start gap-2 mb-2">
+              <span class="bg-diner-pink text-slate-950 font-black text-[10px] tracking-wider px-2.5 py-0.5 rounded uppercase">
+                ★ TOP 1
+              </span>
+              <span class="bg-diner-yellow/20 text-diner-yellow text-[10px] font-bold px-2 py-0.5 rounded border border-diner-yellow/30">
+                Recomendado
+              </span>
+            </div>
+            <h3 class="text-lg font-extrabold text-white mb-1">Explosión Roger's</h3>
+            <span class="text-xl font-black text-diner-cyan block mb-2">$13.800</span>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+              Mezcla tropical de maracuyá, mango y hierbabuena con un toque refrescante y vibrante. Una explosión de sabor única.
+            </p>
+          </div>
+          <button onclick="addToCart('Explosión Roger\'s (TOP 1)', 13800)" class="w-full bg-slate-800 hover:bg-diner-pink hover:text-slate-950 text-white font-bold py-2 rounded-xl text-xs transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-plus"></i> Agregar
+          </button>
+        </div>
+
+        <!-- TOP 2: Limonada de Coco -->
+        <div class="menu-item bg-diner-card border border-diner-cyan/50 rounded-2xl p-4 relative neon-border-cyan flex flex-col justify-between">
+          <div>
+            <div class="mb-2">
+              <span class="bg-diner-cyan text-slate-950 font-black text-[10px] tracking-wider px-2.5 py-0.5 rounded uppercase">
+                ★ TOP 2
+              </span>
+            </div>
+            <h3 class="text-lg font-extrabold text-white mb-1">Limonada de Coco</h3>
+            <span class="text-xl font-black text-diner-cyan block mb-2">$15.000</span>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+              Cremosa, suave y refrescante, con el equilibrio perfecto entre coco natural y limón.
+            </p>
+          </div>
+          <button onclick="addToCart('Limonada de Coco (TOP 2)', 15000)" class="w-full bg-slate-800 hover:bg-diner-cyan hover:text-slate-950 text-white font-bold py-2 rounded-xl text-xs transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-plus"></i> Agregar
+          </button>
+        </div>
+
+        <!-- TOP 3: Piña Colada -->
+        <div class="menu-item bg-diner-card border border-diner-border rounded-2xl p-4 relative flex flex-col justify-between">
+          <div>
+            <div class="mb-2">
+              <span class="bg-diner-purple text-white font-black text-[10px] tracking-wider px-2.5 py-0.5 rounded uppercase">
+                ★ TOP 3
+              </span>
+            </div>
+            <h3 class="text-lg font-extrabold text-white mb-1">Piña Colada</h3>
+            <span class="text-xl font-black text-diner-cyan block mb-2">$13.800</span>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+              El clásico sabor tropical cremoso y refrescante de piña y crema de coco.
+            </p>
+          </div>
+          <button onclick="addToCart('Piña Colada (TOP 3)', 13800)" class="w-full bg-slate-800 hover:bg-diner-pink hover:text-slate-950 text-white font-bold py-2 rounded-xl text-xs transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-plus"></i> Agregar
+          </button>
+        </div>
+
+      </div>
+
+      <!-- OTRAS LIMONADAS -->
+      <div class="pt-4">
+        <h3 class="text-sm font-bold text-diner-yellow uppercase tracking-wider mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-lemon"></i> Otras Limonadas
+        </h3>
+        <div class="grid sm:grid-cols-3 gap-3">
+          <div class="menu-item bg-diner-card border border-diner-border rounded-xl p-3 flex justify-between items-center">
+            <div>
+              <h4 class="font-bold text-sm text-white">Limonada Cerezada</h4>
+              <span class="font-bold text-diner-cyan text-sm">$15.000</span>
+            </div>
+            <button onclick="addToCart('Limonada Cerezada', 15000)" class="bg-slate-800 hover:bg-diner-pink text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">
+              + Añadir
+            </button>
+          </div>
+
+          <div class="menu-item bg-diner-card border border-diner-border rounded-xl p-3 flex justify-between items-center">
+            <div>
+              <h4 class="font-bold text-sm text-white">Limonada Natural</h4>
+              <span class="font-bold text-diner-cyan text-sm">$7.500</span>
+            </div>
+            <button onclick="addToCart('Limonada Natural', 7500)" class="bg-slate-800 hover:bg-diner-pink text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">
+              + Añadir
+            </button>
+          </div>
+
+          <div class="menu-item bg-diner-card border border-diner-border rounded-xl p-3 flex justify-between items-center">
+            <div>
+              <h4 class="font-bold text-sm text-white">Limonada Hierbabuena</h4>
+              <span class="font-bold text-diner-cyan text-sm">$9.200</span>
+            </div>
+            <button onclick="addToCart('Limonada Hierbabuena', 9200)" class="bg-slate-800 hover:bg-diner-pink text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">
+              + Añadir
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: SODAS ESPECIALES & JUGOS -->
+    <section id="sec-sodas" class="menu-section space-y-4">
+      <div class="border-b border-diner-border pb-2 flex justify-between items-end">
+        <div>
+          <span class="text-diner-pink font-bold text-xs uppercase tracking-widest block">Sabores Frutales</span>
+          <h2 class="text-2xl font-black uppercase tracking-wider text-white flex items-center gap-2">
+            <i class="fa-solid fa-bottle-droplet text-diner-pink"></i> Sodas Especiales Roger's
+          </h2>
+        </div>
+      </div>
+
+      <!-- SODAS ESPECIALES GRID -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div class="menu-item bg-diner-card border border-diner-border rounded-xl p-3.5 flex flex-col justify-between">
+          <div>
+            <h4 class="font-bold text-sm text-white">Soda Sandía</h4>
+            <p class="text-[11px] text-slate-400">Refrescante con toque frutal</p>
+          </div>
+          <div class="flex justify-between items-center mt-3">
+            <span class="font-bold text-diner-cyan text-sm">$16.500</span>
+            <button onclick="addToCart('Soda Sandía', 16500)" class="bg-slate-800 hover:bg-diner-pink text-white px-3 py-1 rounded-lg text-xs font-bold transition">
+              + Añadir
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-item bg-diner-card border border-diner-border rounded-xl p-3.5 flex flex-col justify-between">
+          <div>
+            <h4 class="font-bold text-sm text-white">Soda Pink Lychee</h4>
+            <p class="text-[11px] text-slate-400">Exótico lychee rosado</p>
+          </div>
+          <div class="flex justify-between items-center mt-3">
+            <span class="font-bold text-diner-cyan text-sm">$16.500</span>
+            <button onclick="addToCart('Soda Pink Lychee', 16500)" class="bg-slate-800 hover:bg-diner-pink text-white px-3 py-1 rounded-lg text-xs font-bold transition">
+              + Añadir
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-item bg-diner-card border border-diner-border rounded-xl p-3.5 flex flex-col justify-between">
+          <div>
+            <h4 class="font-bold text-sm text-white">Sunset Maracuyá</h4>
+            <p class="text-[11px] text-slate-400">Sabor intenso tropical</p>
+          </div>
+          <div class="flex justify-between items-center mt-3">
+            <span class="font-bold text-diner-cyan text-sm">$16.500</span>
+            <button onclick="addToCart('Soda Sunset Maracuyá', 16500)" class="bg-slate-800 hover:bg-diner-pink text-white px-3 py-1 rounded-lg text-xs font-bold transition">
+              + Añadir
+            </button>
+          </div>
+        </div>
+
+        <!-- Blue Pop TOP 2 -->
+        <div class="menu-item bg-diner-card border border-diner-cyan/50 rounded-xl p-3.5 flex flex-col justify-between relative">
+          <span class="absolute -top-2 right-2 bg-diner-cyan text-slate-950 font-black text-[9px] uppercase px-2 py-0.5 rounded">
+            ★ TOP 2 Soda
+          </span>
+          <div>
+            <h4 class="font-bold text-sm text-white">Soda Blue Pop</h4>
+            <p class="text-[11px] text-slate-400">Refrescante azul vibrante</p>
+          </div>
+          <div class="flex justify-between items-center mt-3">
+            <span class="font-bold text-diner-cyan text-sm">$16.500</span>
+            <button onclick="addToCart('Soda Blue Pop (TOP 2)', 16500)" class="bg-slate-800 hover:bg-diner-cyan hover:text-slate-950 text-white px-3 py-1 rounded-lg text-xs font-bold transition">
+              + Añadir
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- JUGOS NATURALES -->
+      <div class="bg-slate-900/80 border border-diner-border rounded-2xl p-4 mt-4">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-3">
+          <h3 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+            <i class="fa-solid fa-leaf text-emerald-400"></i> Jugos Naturales
+          </h3>
+          <p class="text-xs text-slate-400">Sabores: <span class="text-diner-yellow font-bold">Fresa, Mora, Lulo, Guanábana</span></p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div class="bg-diner-card border border-diner-border p-3 rounded-xl flex justify-between items-center">
+            <div>
+              <p class="font-bold text-xs text-white">Jugo Natural en Agua</p>
+              <span class="text-diner-cyan font-bold text-sm">$8.000</span>
+            </div>
+            <button onclick="addToCart('Jugo Natural en Agua (Elegir sabor: Fresa/Mora/Lulo/Guanábana)', 8000)" class="bg-slate-800 hover:bg-diner-pink text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">
+              + Añadir
+            </button>
+          </div>
+
+          <div class="bg-diner-card border border-diner-border p-3 rounded-xl flex justify-between items-center">
+            <div>
+              <p class="font-bold text-xs text-white">Jugo Natural en Leche</p>
+              <span class="text-diner-cyan font-bold text-sm">$10.500</span>
+            </div>
+            <button onclick="addToCart('Jugo Natural en Leche (Elegir sabor: Fresa/Mora/Lulo/Guanábana)', 10500)" class="bg-slate-800 hover:bg-diner-pink text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">
+              + Añadir
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- SECCIÓN: ENTRADAS PARA PICAR & COMPARTIR -->
-    <section>
-      <div class="border-b border-cyan-500/30 pb-2 mb-6">
-        <h2 class="text-xl font-bold text-cyan-400 uppercase tracking-wide flex items-center gap-2">
-          <i class="fa-solid fa-utensils text-pink-500"></i>
-          Para Picar & Compartir (Entradas)
-        </h2>
+    <section id="sec-entradas" class="menu-section space-y-4">
+      <div class="border-b border-diner-border pb-2 flex items-center gap-2">
+        <i class="fa-solid fa-utensils text-diner-pink"></i>
+        <h2 class="text-xl font-extrabold uppercase tracking-wider text-white">Para Picar & Compartir (Entradas)</h2>
+      </div>
+
+      <!-- Item Destacado Top 1 -->
+      <div class="menu-item bg-diner-card border border-diner-pink/50 rounded-2xl p-5 relative overflow-hidden neon-border-pink">
+        <span class="absolute top-0 right-0 bg-diner-pink text-slate-950 font-black text-[10px] tracking-widest px-3 py-1 rounded-bl-xl uppercase">
+          ★ TOP 1 Entrada
+        </span>
+        <div class="flex justify-between items-start gap-4 mb-2">
+          <div>
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              Canastas Old Clothes
+            </h3>
+            <span class="inline-block bg-diner-yellow/20 text-diner-yellow text-[11px] font-semibold px-2 py-0.5 rounded border border-diner-yellow/30 mt-1">
+              Ideal para compartir
+            </span>
+          </div>
+          <span class="text-xl font-black text-diner-cyan">$21.500</span>
+        </div>
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Crujientes canastas de patacón rellenas de ropa vieja desmechada y jugosa, salteada con hogao casero y un toque de sabor tradicional. ¡Irresistibles de principio a fin!
+        </p>
+        <button onclick="addToCart('Canastas Old Clothes (TOP 1)', 21500)" class="w-full bg-slate-800 hover:bg-diner-pink text-white font-bold py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-plus"></i> Agregar al pedido
+        </button>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: SALCHIPAPAS -->
+    <section id="sec-salchipapas" class="menu-section space-y-4">
+      <div class="border-b border-diner-border pb-2 flex items-center gap-2">
+        <i class="fa-solid fa-fire text-diner-yellow"></i>
+        <h2 class="text-xl font-extrabold uppercase tracking-wider text-white">Salchipapas Especiales</h2>
       </div>
 
       <div class="grid md:grid-cols-2 gap-4">
-        <!-- PLATILLO TOP 1 -->
-        <div class="bg-slate-900 border-2 border-pink-500/40 p-5 rounded-2xl relative">
-          <span class="absolute -top-3 left-4 bg-pink-500 text-slate-950 font-black text-xs px-2.5 py-0.5 rounded-full uppercase">
-            ⭐ TOP 1
-          </span>
-          <div class="flex justify-between items-start mb-2 pt-1">
-            <h3 class="text-lg font-bold text-white">Canastas Old Clothes</h3>
-            <span class="text-pink-400 font-black text-lg">$21.500</span>
+        <!-- Salchipapa Monrroe -->
+        <div class="menu-item bg-diner-card border border-diner-border rounded-2xl p-4 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-bold text-white text-base">Salchipapa Monrroe</h3>
+              <span class="font-black text-diner-cyan">$19.000</span>
+            </div>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+              Una explosión de sabor al mejor estilo diner: 160g de papa Mc Cain, salchicha Americana Zenú, papa chips, queso sábana, tocineta en trocitos y salsa.
+            </p>
           </div>
-          <p class="text-slate-400 text-xs leading-relaxed mb-3">
-            Crujientes canastas de patacón rellenas de ropa vieja desmechada y jugosa, salteada con hogao casero y un toque de sabor tradicional. ¡Ideal para compartir!
-          </p>
+          <button onclick="addToCart('Salchipapa Monrroe', 19000)" class="w-full bg-slate-800 hover:bg-diner-pink text-white font-bold py-2 rounded-xl text-xs transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-plus"></i> Agregar
+          </button>
         </div>
 
-        <!-- SALCHIPAPA MONRROE -->
-        <div class="bg-slate-900 border border-slate-800 p-5 rounded-2xl">
-          <div class="flex justify-between items-start mb-2">
-            <h3 class="text-lg font-bold text-white">Salchipapa Monrroe</h3>
-            <span class="text-pink-400 font-black text-lg">$19.000</span>
+        <!-- Salchipapa Presley -->
+        <div class="menu-item bg-diner-card border border-diner-border rounded-2xl p-4 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-bold text-white text-base">Salchipapa Presley</h3>
+              <span class="font-black text-diner-cyan">$19.000</span>
+            </div>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+              Un clásico elevado al siguiente nivel: 160g de papa Mc Cain, chorizo santarrosano, papa chips, queso sábana, tocineta en trocitos y salsa.
+            </p>
           </div>
-          <p class="text-slate-400 text-xs leading-relaxed mb-3">
-            Explosión de sabor estilo diner: 160g de papa Mc Cain, salchicha americana Zenu, papa chips, queso sábana, tocineta en trocitos y salsa.
-          </p>
-        </div>
-
-        <!-- SALCHIPAPA PRESLEY -->
-        <div class="bg-slate-900 border border-slate-800 p-5 rounded-2xl md:col-span-2">
-          <div class="flex justify-between items-start mb-2">
-            <h3 class="text-lg font-bold text-white">Salchipapa Presley</h3>
-            <span class="text-pink-400 font-black text-lg">$19.000</span>
-          </div>
-          <p class="text-slate-400 text-xs leading-relaxed mb-3">
-            Un clásico elevado al siguiente nivel: 160g de papa Mc Cain, chorizo santarrosano, papa chips, queso sábana, tocineta en trocitos y salsa.
-          </p>
+          <button onclick="addToCart('Salchipapa Presley', 19000)" class="w-full bg-slate-800 hover:bg-diner-pink text-white font-bold py-2 rounded-xl text-xs transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-plus"></i> Agregar
+          </button>
         </div>
       </div>
     </section>
 
     <!-- SECCIÓN: OTRAS ENTRADAS -->
-    <section>
-      <div class="border-b border-cyan-500/30 pb-2 mb-6">
-        <h2 class="text-xl font-bold text-cyan-400 uppercase tracking-wide flex items-center gap-2">
-          <i class="fa-solid fa-bowl-food text-pink-500"></i>
-          Otras Entradas
-        </h2>
+    <section id="sec-otras-entradas" class="menu-section space-y-4">
+      <div class="border-b border-diner-border pb-2 flex items-center gap-2">
+        <i class="fa-solid fa-bowl-food text-diner-pink"></i>
+        <h2 class="text-xl font-extrabold uppercase tracking-wider text-white">Otras Entradas</h2>
       </div>
 
-      <div class="grid sm:grid-cols-2 gap-3 text-sm">
-        <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
-          <span class="text-slate-200">Nuggets de Pollo (5 unidades)</span>
-          <span class="text-cyan-400 font-bold">$13.500</span>
+      <div class="grid sm:grid-cols-2 gap-3">
+        <div class="menu-item bg-diner-card border border-diner-border rounded-xl p-3 flex justify-between items-center">
+          <div>
+            <h4 class="font-bold text-sm text-white">Nuggets de Pollo</h4>
+            <p class="text-[11px] text-slate-400">6 Nuggets acompañados de salsa</p>
+            <span class="font-bold text-diner-cyan text-sm">$13.500</span>
+          </div>
+          <button onclick="addToCart('Nuggets de Pollo (6 und)', 13500)" class="bg-slate-800 hover:bg-diner-pink text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">
+            + Añadir
+          </button>
         </div>
 
-        <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
-          <span class="text-slate-200">Empanaditas de Carne (6 unidades)</span>
-          <span class="text-cyan-400 font-bold">$19.500</span>
+        <div class="menu-item bg-diner-card border border-diner-border rounded-xl p-3 flex justify-between items-center">
+          <div>
+            <h4 class="font-bold text-sm text-white">Empanaditas de Carne</h4>
+            <p class="text-[11px] text-slate-400">6 Empanaditas + Ají casero</p>
+            <span class="font-bold text-diner-cyan text-sm">$19.500</span>
+          </div>
+          <button onclick="addToCart('Empanaditas de Carne (6 und)', 19500)" class="bg-slate-800 hover:bg-diner-pink text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">
+            + Añadir
+          </button>
         </div>
 
-        <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
-          <span class="text-slate-200">Pinchos de Pollo Apanado</span>
-          <span class="text-cyan-400 font-bold">$15.000</span>
+        <div class="menu-item bg-diner-card border border-diner-border rounded-xl p-3 flex justify-between items-center">
+          <div>
+            <h4 class="font-bold text-sm text-white">Pinchos de Pollo Apanado</h4>
+            <p class="text-[11px] text-slate-400">2 Pinchos + Salsa de la casa</p>
+            <span class="font-bold text-diner-cyan text-sm">$15.000</span>
+          </div>
+          <button onclick="addToCart('Pinchos de Pollo Apanado (2 und)', 15000)" class="bg-slate-800 hover:bg-diner-pink text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">
+            + Añadir
+          </button>
         </div>
 
-        <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
-          <span class="text-slate-200">Dedos de Mozzarella</span>
-          <span class="text-cyan-400 font-bold">$14.500</span>
+        <div class="menu-item bg-diner-card border border-diner-border rounded-xl p-3 flex justify-between items-center">
+          <div>
+            <h4 class="font-bold text-sm text-white">Dedos de Mozzarella</h4>
+            <p class="text-[11px] text-slate-400">5 Dedos de queso + Salsa</p>
+            <span class="font-bold text-diner-cyan text-sm">$14.500</span>
+          </div>
+          <button onclick="addToCart('Dedos de Mozzarella (5 und)', 14500)" class="bg-slate-800 hover:bg-diner-pink text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">
+            + Añadir
+          </button>
         </div>
 
-        <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
-          <span class="text-slate-200">Chicharroncitos</span>
-          <span class="text-cyan-400 font-bold">$15.000</span>
+        <div class="menu-item bg-diner-card border border-diner-border rounded-xl p-3 flex justify-between items-center">
+          <div>
+            <h4 class="font-bold text-sm text-white">Chicharroncitos</h4>
+            <p class="text-[11px] text-slate-400">150g + Tacos de limón y cebolla</p>
+            <span class="font-bold text-diner-cyan text-sm">$15.000</span>
+          </div>
+          <button onclick="addToCart('Chicharroncitos (150g)', 15000)" class="bg-slate-800 hover:bg-diner-pink text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">
+            + Añadir
+          </button>
         </div>
 
-        <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
-          <span class="text-slate-200">Aros de Cebolla</span>
-          <span class="text-cyan-400 font-bold">$15.500</span>
+        <div class="menu-item bg-diner-card border border-diner-border rounded-xl p-3 flex justify-between items-center">
+          <div>
+            <h4 class="font-bold text-sm text-white">Aros de Cebolla</h4>
+            <p class="text-[11px] text-slate-400">Crujientes aros + Salsa</p>
+            <span class="font-bold text-diner-cyan text-sm">$15.500</span>
+          </div>
+          <button onclick="addToCart('Aros de Cebolla', 15500)" class="bg-slate-800 hover:bg-diner-pink text-white px-3 py-1.5 rounded-lg text-xs font-bold transition">
+            + Añadir
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- SECCIÓN: ACOMPAÑA TU PEDIDO -->
-    <section>
-      <div class="border-b border-cyan-500/30 pb-2 mb-6">
-        <h2 class="text-xl font-bold text-cyan-400 uppercase tracking-wide flex items-center gap-2">
-          <i class="fa-solid fa-cookie text-pink-500"></i>
-          Acompaña Tu Pedido
-        </h2>
+    <!-- SECCIÓN: ACOMPAÑANTES & EXTRAS -->
+    <section id="sec-acomp" class="menu-section space-y-4">
+      <div class="border-b border-diner-border pb-2 flex items-center gap-2">
+        <i class="fa-solid fa-cheese text-diner-yellow"></i>
+        <h2 class="text-xl font-extrabold uppercase tracking-wider text-white">Acompañantes & Extras</h2>
       </div>
 
-      <div class="grid sm:grid-cols-3 gap-3 text-sm">
-        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 text-center">
-          <h4 class="text-white font-semibold">Papas Francesas</h4>
-          <p class="text-pink-400 font-black text-base mt-1">$7.500</p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+        <div class="menu-item bg-diner-card border border-diner-border rounded-xl p-3 text-center">
+          <h4 class="font-bold text-xs text-white">Papas Francesas</h4>
+          <span class="block font-black text-diner-cyan text-sm my-1">$7.500</span>
+          <button onclick="addToCart('Papas Francesas', 7500)" class="w-full bg-slate-800 hover:bg-diner-pink text-white py-1 rounded-lg text-xs font-bold transition">
+            + Añadir
+          </button>
         </div>
 
-        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 text-center">
-          <h4 class="text-white font-semibold">Papas Casco</h4>
-          <p class="text-pink-400 font-black text-base mt-1">$7.500</p>
+        <div class="menu-item bg-diner-card border border-diner-border rounded-xl p-3 text-center">
+          <h4 class="font-bold text-xs text-white">Papas Casco</h4>
+          <span class="block font-black text-diner-cyan text-sm my-1">$7.500</span>
+          <button onclick="addToCart('Papas Casco', 7500)" class="w-full bg-slate-800 hover:bg-diner-pink text-white py-1 rounded-lg text-xs font-bold transition">
+            + Añadir
+          </button>
         </div>
 
-        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 text-center">
-          <h4 class="text-white font-semibold">Queso Cheddar Fundido</h4>
-          <p class="text-pink-400 font-black text-base mt-1">$10.000</p>
+        <div class="menu-item bg-diner-card border border-diner-border rounded-xl p-3 text-center">
+          <h4 class="font-bold text-xs text-white">Cheddar Fundido</h4>
+          <span class="block font-black text-diner-cyan text-sm my-1">$10.000</span>
+          <button onclick="addToCart('Queso Cheddar Fundido', 10000)" class="w-full bg-slate-800 hover:bg-diner-pink text-white py-1 rounded-lg text-xs font-bold transition">
+            + Añadir
+          </button>
+        </div>
+
+        <div class="menu-item bg-diner-card border border-diner-border rounded-xl p-3 text-center">
+          <h4 class="font-bold text-xs text-white">Doble Tocineta</h4>
+          <span class="block font-black text-diner-cyan text-sm my-1">$3.000</span>
+          <button onclick="addToCart('Doble Tocineta Extra', 3000)" class="w-full bg-slate-800 hover:bg-diner-pink text-white py-1 rounded-lg text-xs font-bold transition">
+            + Añadir
+          </button>
+        </div>
+
+        <div class="menu-item bg-diner-card border border-diner-border rounded-xl p-3 text-center">
+          <h4 class="font-bold text-xs text-white">Huevo Frito Extra</h4>
+          <span class="block font-black text-diner-cyan text-sm my-1">$1.500</span>
+          <button onclick="addToCart('Huevo Frito Extra', 1500)" class="w-full bg-slate-800 hover:bg-diner-pink text-white py-1 rounded-lg text-xs font-bold transition">
+            + Añadir
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- SECCIÓN: EXTRAS -->
-    <section>
-      <div class="bg-slate-900/60 p-5 rounded-2xl border border-slate-800">
-        <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
-          <i class="fa-solid fa-plus text-cyan-400"></i> Extras
-        </h3>
-        <div class="flex flex-wrap gap-4 text-sm">
-          <div class="bg-slate-800 px-4 py-2 rounded-xl border border-slate-700 flex items-center gap-3">
-            <span class="text-slate-300">Doble Tocineta Extra</span>
-            <span class="text-pink-400 font-bold">$3.000</span>
-          </div>
-          <div class="bg-slate-800 px-4 py-2 rounded-xl border border-slate-700 flex items-center gap-3">
-            <span class="text-slate-300">Huevo Frito Extra</span>
-            <span class="text-pink-400 font-bold">$1.500</span>
-          </div>
+    <!-- SECCIÓN: CÓCTELES -->
+    <section id="sec-cocteles" class="menu-section space-y-4">
+      <div class="border-b border-diner-border pb-2 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-martini-glass-citrus text-diner-purple"></i>
+          <h2 class="text-xl font-extrabold uppercase tracking-wider text-white">Cócteles & Noche</h2>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div class="menu-item bg-diner-card border border-diner-pink/40 rounded-xl p-4 text-center">
+          <span class="bg-diner-pink text-slate-950 text-[10px] font-black uppercase px-2 py-0.5 rounded">TOP 1</span>
+          <h4 class="font-bold text-white text-base mt-2">Cherry Bomb</h4>
+          <span class="block font-black text-diner-cyan text-base my-2">$22.000</span>
+          <button onclick="addToCart('Cóctel Cherry Bomb', 22000)" class="w-full bg-slate-800 hover:bg-diner-pink text-white py-1.5 rounded-lg text-xs font-bold transition">
+            + Añadir
+          </button>
+        </div>
+
+        <div class="menu-item bg-diner-card border border-diner-border rounded-xl p-4 text-center">
+          <span class="bg-diner-yellow text-slate-950 text-[10px] font-black uppercase px-2 py-0.5 rounded">TOP 2</span>
+          <h4 class="font-bold text-white text-base mt-2">Summer Drive</h4>
+          <span class="block font-black text-diner-cyan text-base my-2">$35.000</span>
+          <button onclick="addToCart('Cóctel Summer Drive', 35000)" class="w-full bg-slate-800 hover:bg-diner-pink text-white py-1.5 rounded-lg text-xs font-bold transition">
+            + Añadir
+          </button>
+        </div>
+
+        <div class="menu-item bg-diner-card border border-diner-border rounded-xl p-4 text-center">
+          <span class="bg-diner-cyan text-slate-950 text-[10px] font-black uppercase px-2 py-0.5 rounded">TOP 3</span>
+          <h4 class="font-bold text-white text-base mt-2">Marilyn Monroe</h4>
+          <span class="block font-black text-diner-cyan text-base my-2">$33.000</span>
+          <button onclick="addToCart('Cóctel Marilyn Monroe', 33000)" class="w-full bg-slate-800 hover:bg-diner-pink text-white py-1.5 rounded-lg text-xs font-bold transition">
+            + Añadir
+          </button>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- PIE DE PÁGINA FIXO PARA PEDIDOS -->
-  <footer class="fixed bottom-0 left-0 w-full bg-slate-900 border-t border-slate-800 p-4 z-50">
-    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
-      <div class="text-xs text-slate-400 text-center sm:text-left">
-        <p class="font-bold text-white">📍 Cl. 51 Sur #87-18, Bogotá</p>
-        <p>Atención y pedidos por WhatsApp</p>
+  <!-- BARRA INFERIOR DE PEDIDO (RESUMEN FLOTANTE) -->
+  <div id="cart-bar" class="fixed bottom-0 left-0 right-0 bg-diner-card/95 backdrop-blur-md border-t border-diner-pink p-4 z-50 transition-transform transform translate-y-0 shadow-2xl">
+    <div class="max-w-4xl mx-auto flex justify-between items-center gap-4">
+      <div>
+        <span class="text-[11px] text-slate-400 block">Tu Pedido:</span>
+        <div class="flex items-center gap-2">
+          <span id="cart-count" class="bg-diner-pink text-slate-950 text-xs font-black px-2 py-0.5 rounded-full">0 ítems</span>
+          <span id="cart-total" class="text-xl font-black text-white">$0</span>
+        </div>
       </div>
-      <a href="https://wa.me/573215484976?text=Hola%20Roger%27s%20Diner,%20quiero%20hacer%20un%20pedido" target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold px-6 py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-900/40">
-        <i class="fa-brands fa-whatsapp text-lg"></i>
-        <span>Hacer Pedido al 321 548 4976</span>
-      </a>
-    </div>
-  </footer>
 
+      <div class="flex gap-2">
+        <button onclick="openCartModal()" class="bg-slate-800 hover:bg-slate-700 text-white px-3.5 py-2.5 rounded-xl font-bold text-xs transition border border-diner-border flex items-center gap-1.5">
+          <i class="fa-solid fa-receipt"></i>
+          <span>Detalle</span>
+        </button>
+        <button onclick="sendOrderWhatsApp()" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-4 py-2.5 rounded-xl text-xs uppercase tracking-wider transition flex items-center gap-2 shadow-lg shadow-emerald-500/20">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>Pedir por WhatsApp</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE RESUMEN DEL PEDIDO -->
+  <div id="cart-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-diner-card border border-diner-border rounded-2xl w-full max-w-md p-6 space-y-4 shadow-2xl relative">
+      <div class="flex justify-between items-center border-b border-diner-border pb-3">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <i class="fa-solid fa-receipt text-diner-pink"></i> Detalle de tu Pedido
+        </h3>
+        <button onclick="closeCartModal()" class="text-slate-400 hover:text-white">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Lista de ítems -->
+      <div id="modal-item-list" class="max-h-60 overflow-y-auto space-y-2 pr-1 divide-y divide-diner-border/50 text-xs">
+        <p class="text-slate-500 text-center py-4">Aún no has añadido bebidas o platos.</p>
+      </div>
+
+      <!-- Total -->
+      <div class="border-t border-diner-border pt-3 flex justify-between items-center">
+        <span class="font-bold text-slate-300">Total acumulado:</span>
+        <span id="modal-total-price" class="text-2xl font-black text-diner-cyan">$0</span>
+      </div>
+
+      <!-- Notas adicionales -->
+      <div>
+        <label class="block text-[11px] font-semibold text-slate-400 mb-1">Mesa / Observaciones o Sabores de jugos:</label>
+        <input type="text" id="order-notes" placeholder="Ej: Mesa #4 / Jugo de Lulo / Sin cebolla" class="w-full bg-diner-bg border border-diner-border rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-diner-pink">
+      </div>
+
+      <!-- Acciones -->
+      <div class="flex gap-2 pt-2">
+        <button onclick="clearCart()" class="w-1/3 bg-slate-800 hover:bg-red-900/50 text-red-400 py-3 rounded-xl font-bold text-xs transition">
+          Vaciar
+        </button>
+        <button onclick="sendOrderWhatsApp()" class="w-2/3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black py-3 rounded-xl text-xs uppercase tracking-wider transition flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-base"></i> Confirmar WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT DE LÓGICA DEL MENÚ Y FILTROS -->
+  <script>
+    let cart = [];
+
+    function addToCart(name, price) {
+      const existing = cart.find(item => item.name === name);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ name, price, quantity: 1 });
+      }
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+      document.getElementById('cart-count').innerText = `${totalItems} ítems`;
+      document.getElementById('cart-total').innerText = `$${totalPrice.toLocaleString('es-CO')}`;
+      document.getElementById('modal-total-price').innerText = `$${totalPrice.toLocaleString('es-CO')}`;
+
+      const modalList = document.getElementById('modal-item-list');
+      if (cart.length === 0) {
+        modalList.innerHTML = '<p class="text-slate-500 text-center py-4">Aún no has añadido bebidas o platos.</p>';
+      } else {
+        modalList.innerHTML = cart.map((item, index) => `
+          <div class="flex justify-between items-center py-2">
+            <div>
+              <p class="font-bold text-white">${item.name}</p>
+              <p class="text-[10px] text-slate-400">$${item.price.toLocaleString('es-CO')} x ${item.quantity}</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="changeQty(${index}, -1)" class="w-6 h-6 bg-slate-800 text-white rounded font-bold">-</button>
+              <span class="font-mono text-white">${item.quantity}</span>
+              <button onclick="changeQty(${index}, 1)" class="w-6 h-6 bg-slate-800 text-white rounded font-bold">+</button>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    function changeQty(index, delta) {
+      cart[index].quantity += delta;
+      if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+      }
+      updateCartUI();
+    }
+
+    function clearCart() {
+      cart = [];
+      updateCartUI();
+      closeCartModal();
+    }
+
+    function openCartModal() {
+      document.getElementById('cart-modal').classList.remove('hidden');
+    }
+    function closeCartModal() {
+      document.getElementById('cart-modal').classList.add('hidden');
+    }
+
+    function sendOrderWhatsApp() {
+      if (cart.length === 0) {
+        alert('Por favor añade al menos un producto o bebida antes de enviar el pedido.');
+        return;
+      }
+
+      const phoneNumber = '573215484976';
+      const notes = document.getElementById('order-notes').value;
+      const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+      let text = `*¡Hola Roger's Diner! Quiero realizar un pedido:* \n\n`;
+      cart.forEach(item => {
+        text += `• ${item.quantity}x ${item.name} - $${(item.price * item.quantity).toLocaleString('es-CO')}\n`;
+      });
+
+      text += `\n*Total a pagar:* $${totalPrice.toLocaleString('es-CO')}\n`;
+      if (notes) text += `*Detalles / Mesa / Sabores:* ${notes}\n`;
+
+      const encodedText = encodeURIComponent(text);
+      window.open(`https://wa.me/${phoneNumber}?text=${encodedText}`, '_blank');
+    }
+
+    function filterCategory(cat) {
+        document.querySelectorAll('.cat-btn').forEach(btn => {
+        btn.classList.remove('bg-diner-pink', 'text-slate-950', 'font-extrabold');
+        btn.classList.add('bg-diner-card', 'text-slate-300');
+      });
+      event.target.classList.remove('bg-diner-card', 'text-slate-300');
+      event.target.classList.add('bg-diner-pink', 'text-slate-950', 'font-extrabold');
+
+      if (cat === 'todos') {
+        document.querySelectorAll('.menu-section').forEach(sec => sec.classList.remove('hidden'));
+      } else {
+        document.querySelectorAll('.menu-section').forEach(sec => sec.classList.add('hidden'));
+        if (cat === 'bebidas') document.getElementById('sec-bebidas').classList.remove('hidden');
+        if (cat === 'sodas') document.getElementById('sec-sodas').classList.remove('hidden');
+        if (cat === 'entradas') document.getElementById('sec-entradas').classList.remove('hidden');
+        if (cat === 'salchipapas') document.getElementById('sec-salchipapas').classList.remove('hidden');
+        if (cat === 'otras-entradas') document.getElementById('sec-otras-entradas').classList.remove('hidden');
+        if (cat === 'acomp') document.getElementById('sec-acomp').classList.remove('hidden');
+        if (cat === 'cocteles') document.getElementById('sec-cocteles').classList.remove('hidden');
+      }
+    }
+  </script>
 </body>
 </html>
