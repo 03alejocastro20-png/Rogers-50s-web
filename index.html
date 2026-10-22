@@ -21,8 +21,8 @@
 </head>
 <body class="bg-[#030712] text-slate-100 font-sans pb-32">
 
-  <!-- CABECERA DESTACADA ESTILO RETRO DINER -->
-  <header class="pt-8 pb-4 px-4 bg-gradient-to-b from-slate-950 via-[#030712] to-[#030712] text-center border-b border-slate-900">
+  <!-- CABECERA RETRO DINER CON NEÓN -->
+  <header class="pt-8 pb-6 px-4 bg-gradient-to-b from-slate-950 via-[#030712] to-[#030712] text-center border-b border-slate-900 sticky top-0 z-40 backdrop-blur-md bg-opacity-95">
     <div class="max-w-4xl mx-auto space-y-4">
       
       <!-- BADGE SUPERIOR -->
@@ -34,64 +34,66 @@
 
       <!-- TÍTULO PRINCIPAL NEÓN -->
       <div>
-        <h1 class="text-4xl sm:text-6xl font-black italic tracking-wide text-white uppercase neon-title">
+        <h1 class="text-3xl sm:text-5xl font-black italic tracking-wide text-white uppercase neon-title">
           ROGER'S <span class="text-pink-500">DINER</span>
         </h1>
-        <p class="text-xs sm:text-sm font-bold text-cyan-400 tracking-widest uppercase mt-2 neon-cyan">
+        <p class="text-[11px] sm:text-xs font-bold text-cyan-400 tracking-widest uppercase mt-1.5 neon-cyan">
           AUTÉNTICO SABOR 50'S · CÓCTELES & COMIDA ARTESANAL
         </p>
       </div>
 
       <!-- BOTONES DE CONTACTO -->
-      <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-3 text-xs pt-1">
-        <a href="https://maps.google.com/?q=Cl.+51+Sur+%2387-18,+Bogot%C3%A1" target="_blank" class="flex items-center gap-2 bg-slate-900/90 hover:bg-slate-800 text-slate-200 px-4 py-2 rounded-xl border border-slate-800 transition shadow-sm">
+      <div class="flex flex-wrap justify-center items-center gap-2 text-xs pt-1">
+        <a href="https://maps.google.com/?q=Cl.+51+Sur+%2387-18,+Bogot%C3%A1" target="_blank" class="flex items-center gap-2 bg-slate-900/90 hover:bg-slate-800 text-slate-200 px-3.5 py-1.5 rounded-xl border border-slate-800 transition">
           <i class="fa-solid fa-location-dot text-pink-500"></i>
           <span class="font-bold">Cl. 51 Sur #87-18, Bogotá</span>
         </a>
 
-        <a href="tel:3215484976" class="flex items-center gap-2 bg-slate-900/90 hover:bg-slate-800 text-slate-200 px-4 py-2 rounded-xl border border-slate-800 transition shadow-sm">
+        <a href="tel:3215484976" class="flex items-center gap-2 bg-slate-900/90 hover:bg-slate-800 text-slate-200 px-3.5 py-1.5 rounded-xl border border-slate-800 transition">
           <i class="fa-solid fa-phone text-cyan-400"></i>
           <span class="font-bold">321 548 4976</span>
         </a>
 
-        <a href="https://wa.me/573215484976" target="_blank" class="flex items-center gap-2 bg-emerald-950/40 hover:bg-emerald-900/60 text-emerald-400 border border-emerald-600/50 px-4 py-2 rounded-xl font-bold transition shadow-sm">
+        <a href="https://wa.me/573215484976" target="_blank" class="flex items-center gap-2 bg-emerald-950/40 hover:bg-emerald-900/60 text-emerald-400 border border-emerald-600/50 px-3.5 py-1.5 rounded-xl font-bold transition">
           <i class="fa-brands fa-whatsapp text-sm"></i>
           <span>WhatsApp Pedidos</span>
         </a>
       </div>
 
-      <!-- BUSCADOR PRINCIPAL -->
-      <div class="max-w-xl mx-auto pt-2">
+      <!-- BUSCADOR -->
+      <div class="max-w-xl mx-auto pt-1">
         <div class="relative">
-          <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
-          <input type="text" id="searchInput" onkeyup="filterMenu()" placeholder="Buscar por plato, ingrediente o bebida..." class="w-full bg-[#0b1329]/90 text-white placeholder-slate-500 text-xs sm:text-sm pl-11 pr-4 py-3 rounded-full border border-slate-800 focus:outline-none focus:border-pink-500 transition shadow-inner">
+          <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+          <input type="text" id="searchInput" onkeyup="filterMenu()" placeholder="Buscar por plato, ingrediente o bebida..." class="w-full bg-[#0b1329]/90 text-white placeholder-slate-500 text-xs pl-10 pr-4 py-2.5 rounded-full border border-slate-800 focus:outline-none focus:border-pink-500 transition">
         </div>
       </div>
 
-      <!-- NAVEGACIÓN DE CATEGORÍAS -->
-      <nav class="flex justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar pt-2 pb-1 text-xs font-bold">
-        <button onclick="scrollToCat('hamburguesas')" class="whitespace-nowrap px-4 py-2 rounded-full bg-slate-900 text-slate-300 hover:bg-pink-600 hover:text-white border border-slate-800 transition flex items-center gap-2">🍔 Hamburguesas Artesanales & Clásicas</button>
-        <button onclick="scrollToCat('picar')" class="whitespace-nowrap px-4 py-2 rounded-full bg-slate-900 text-slate-300 hover:bg-pink-600 hover:text-white border border-slate-800 transition flex items-center gap-2">🍟 Para Picar & Compartir</button>
-        <button onclick="scrollToCat('infantil')" class="whitespace-nowrap px-4 py-2 rounded-full bg-slate-900 text-slate-300 hover:bg-pink-600 hover:text-white border border-slate-800 transition flex items-center gap-2">👶 Menú Infantil & Combos</button>
-        <button onclick="scrollToCat('cocteles')" class="whitespace-nowrap px-4 py-2 rounded-full bg-slate-900 text-slate-300 hover:bg-pink-600 hover:text-white border border-slate-800 transition flex items-center gap-2">🍸 Cócteles</button>
-        <button onclick="scrollToCat('bebidas')" class="whitespace-nowrap px-4 py-2 rounded-full bg-slate-900 text-slate-300 hover:bg-pink-600 hover:text-white border border-slate-800 transition flex items-center gap-2">🥤 Bebidas de la Casa & Sodas</button>
+      <!-- FILTROS DE NAVEGACIÓN DE CATEGORÍAS -->
+      <nav class="flex justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar pt-2 text-xs font-bold">
+        <button onclick="scrollToCat('hamburguesas')" class="whitespace-nowrap px-3.5 py-1.5 rounded-full bg-slate-900 text-slate-300 hover:bg-pink-600 hover:text-white border border-slate-800 transition">🍔 Hamburguesas & Combos</button>
+        <button onclick="scrollToCat('picar')" class="whitespace-nowrap px-3.5 py-1.5 rounded-full bg-slate-900 text-slate-300 hover:bg-pink-600 hover:text-white border border-slate-800 transition">🍟 Para Picar & Entradas</button>
+        <button onclick="scrollToCat('infantil')" class="whitespace-nowrap px-3.5 py-1.5 rounded-full bg-slate-900 text-slate-300 hover:bg-pink-600 hover:text-white border border-slate-800 transition">👶 Menú Infantil</button>
+        <button onclick="scrollToCat('cocteles')" class="whitespace-nowrap px-3.5 py-1.5 rounded-full bg-slate-900 text-slate-300 hover:bg-pink-600 hover:text-white border border-slate-800 transition">🍸 Cócteles</button>
+        <button onclick="scrollToCat('bebidas')" class="whitespace-nowrap px-3.5 py-1.5 rounded-full bg-slate-900 text-slate-300 hover:bg-pink-600 hover:text-white border border-slate-800 transition">🥤 Bebidas & Sodas</button>
+        <button onclick="scrollToCat('cervezas')" class="whitespace-nowrap px-3.5 py-1.5 rounded-full bg-slate-900 text-slate-300 hover:bg-pink-600 hover:text-white border border-slate-800 transition">🍺 Cervezas & Gaseosas</button>
       </nav>
 
     </div>
   </header>
 
-  <!-- CONTENIDO PRINCIPAL DEL MENÚ -->
+  <!-- CONTENIDO DEL MENÚ -->
   <main class="max-w-4xl mx-auto px-4 py-8 space-y-12">
 
-    <!-- 🍔 SECCIÓN HAMBURGUESAS + COMBOS -->
+    <!-- 🍔 SECCIÓN: HAMBURGUESAS Y COMBOS -->
     <section id="hamburguesas" class="menu-section">
       <div class="border-b border-pink-500/30 pb-2 mb-6">
         <h2 class="text-2xl font-black text-pink-500 uppercase tracking-wide flex items-center gap-2">
-          <i class="fa-solid fa-burger text-cyan-400"></i> Hamburguesas 100% Artesanales
+          <i class="fa-solid fa-burger text-cyan-400"></i> Hamburguesas Artesanales
         </h2>
         <p class="text-xs text-slate-400 mt-1">Todas incluyen: Pan artesanal, lechuga, tomate, cebolla, salsas de la casa y vegetales.</p>
       </div>
 
+      <!-- DESTACADAS TOP -->
       <div class="grid md:grid-cols-2 gap-4 mb-6">
         <div class="menu-item bg-slate-900 border-2 border-pink-500/50 p-5 rounded-2xl relative">
           <span class="absolute -top-3 left-4 bg-pink-500 text-slate-950 font-black text-xs px-2.5 py-0.5 rounded-full uppercase">⭐ TOP 1</span>
@@ -99,7 +101,7 @@
             <h3 class="text-lg font-bold text-white item-name">Rockin' Roger's</h3>
             <span class="text-pink-400 font-black text-lg">$34.500</span>
           </div>
-          <p class="text-slate-400 text-xs leading-relaxed mb-4">Carne 150g, Queso Cheddar, 2 lonjas de tocineta, 50g de costillas en salsa BBQ, 50g de chicharrón y queso fundido.</p>
+          <p class="text-slate-400 text-xs leading-relaxed mb-4">Carne 150g, Queso Cheddar, 2 lonjas de tocineta, 50g de costillas BBQ, 50g de chicharrón y queso fundido.</p>
           <button onclick="addToCart('Rockin\' Roger\'s', 34500)" class="w-full bg-pink-600 hover:bg-pink-500 text-white font-bold py-2 rounded-xl text-xs transition">+ Agregar al pedido ($34.500)</button>
         </div>
 
@@ -114,40 +116,47 @@
         </div>
       </div>
 
+      <!-- HAMBURGUESAS CLÁSICAS -->
       <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3 mb-8">
         <div class="menu-item bg-slate-900 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
           <div><div class="flex justify-between items-center mb-1"><h4 class="text-white font-bold item-name">Monroe</h4><span class="text-pink-400 font-black text-sm">$19.800</span></div><p class="text-slate-400 text-xs mb-3">Queso cheddar, papa chips, pollo apanado, pepinillos, salsa Elvis.</p></div>
           <button onclick="addToCart('Hamburguesa Monroe', 19800)" class="w-full bg-slate-800 hover:bg-slate-700 text-pink-400 font-bold py-1.5 rounded-lg text-xs transition border border-slate-700">+ Agregar</button>
         </div>
+
         <div class="menu-item bg-slate-900 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
           <div><div class="flex justify-between items-center mb-1"><h4 class="text-white font-bold item-name">Henry</h4><span class="text-pink-400 font-black text-sm">$19.000</span></div><p class="text-slate-400 text-xs mb-3">Carne 150g, queso cheddar, cebolla, tomate, pepinillos, salsa Elvis.</p></div>
           <button onclick="addToCart('Hamburguesa Henry', 19000)" class="w-full bg-slate-800 hover:bg-slate-700 text-pink-400 font-bold py-1.5 rounded-lg text-xs transition border border-slate-700">+ Agregar</button>
         </div>
+
         <div class="menu-item bg-slate-900 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
           <div><div class="flex justify-between items-center mb-1"><h4 class="text-white font-bold item-name">Wop</h4><span class="text-pink-400 font-black text-sm">$22.000</span></div><p class="text-slate-400 text-xs mb-3">Carne 150g, queso cheddar, cebolla salteada, huevo frito, salsa Elvis.</p></div>
           <button onclick="addToCart('Hamburguesa Wop', 22000)" class="w-full bg-slate-800 hover:bg-slate-700 text-pink-400 font-bold py-1.5 rounded-lg text-xs transition border border-slate-700">+ Agregar</button>
         </div>
+
         <div class="menu-item bg-slate-900 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
           <div><div class="flex justify-between items-center mb-1"><h4 class="text-white font-bold item-name">Presley</h4><span class="text-pink-400 font-black text-sm">$20.000</span></div><p class="text-slate-400 text-xs mb-3">Carne 150g, queso cheddar, pollo apanado, salsa Elvis.</p></div>
           <button onclick="addToCart('Hamburguesa Presley', 20000)" class="w-full bg-slate-800 hover:bg-slate-700 text-pink-400 font-bold py-1.5 rounded-lg text-xs transition border border-slate-700">+ Agregar</button>
         </div>
+
         <div class="menu-item bg-slate-900 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
           <div><div class="flex justify-between items-center mb-1"><h4 class="text-white font-bold item-name">Rockabilly</h4><span class="text-pink-400 font-black text-sm">$24.500</span></div><p class="text-slate-400 text-xs mb-3">Carne 150g, queso cheddar, tocineta, aros de cebolla apanados, salsa Elvis.</p></div>
           <button onclick="addToCart('Hamburguesa Rockabilly', 24500)" class="w-full bg-slate-800 hover:bg-slate-700 text-pink-400 font-bold py-1.5 rounded-lg text-xs transition border border-slate-700">+ Agregar</button>
         </div>
+
         <div class="menu-item bg-slate-900 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
           <div><div class="flex justify-between items-center mb-1"><h4 class="text-white font-bold item-name">Hillbilly</h4><span class="text-pink-400 font-black text-sm">$28.500</span></div><p class="text-slate-400 text-xs mb-3">Carne 150g, queso cheddar, hogao criollo, picante, maíz tierno, salsa Elvis.</p></div>
           <button onclick="addToCart('Hamburguesa Hillbilly', 28500)" class="w-full bg-slate-800 hover:bg-slate-700 text-pink-400 font-bold py-1.5 rounded-lg text-xs transition border border-slate-700">+ Agregar</button>
         </div>
+
         <div class="menu-item bg-slate-900 p-4 rounded-xl border border-slate-800 flex flex-col justify-between sm:col-span-2 md:col-span-1">
           <div><div class="flex justify-between items-center mb-1"><h4 class="text-white font-bold item-name">Rock and Roll</h4><span class="text-pink-400 font-black text-sm">$26.900</span></div><p class="text-slate-400 text-xs mb-3">Carne 150g, queso cheddar, costillas BBQ, tocineta, salsa Elvis.</p></div>
           <button onclick="addToCart('Hamburguesa Rock and Roll', 26900)" class="w-full bg-slate-800 hover:bg-slate-700 text-pink-400 font-bold py-1.5 rounded-lg text-xs transition border border-slate-700">+ Agregar</button>
         </div>
       </div>
 
-      <!-- COMBOS Y OPCIONES -->
+      <!-- COMBOS Y ADICIONES PARA HAMBURGUESAS -->
       <div class="bg-slate-900/90 p-5 rounded-2xl border border-cyan-500/40">
-        <h3 class="text-sm font-black text-cyan-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+        <h3 class="text-xs font-black text-cyan-400 uppercase tracking-wider mb-3 flex items-center gap-2">
           <i class="fa-solid fa-plus-circle text-pink-500"></i> Arma tu Hamburguesa en Combo o Adiciona Carne:
         </h3>
         <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-3 text-xs">
@@ -171,7 +180,7 @@
       </div>
     </section>
 
-    <!-- 🍟 SECCIÓN PARA PICAR (SIMPLIFICADA) -->
+    <!-- 🍟 SECCIÓN: PARA PICAR & ENTRADAS -->
     <section id="picar" class="menu-section">
       <div class="border-b border-cyan-500/30 pb-2 mb-6">
         <h2 class="text-2xl font-black text-cyan-400 uppercase tracking-wide flex items-center gap-2">
@@ -179,11 +188,11 @@
         </h2>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-4">
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
         <div class="menu-item bg-slate-900 border-2 border-pink-500/50 p-5 rounded-2xl relative">
           <span class="absolute -top-3 left-4 bg-pink-500 text-slate-950 font-black text-xs px-2.5 py-0.5 rounded-full uppercase">⭐ TOP 1</span>
           <div class="flex justify-between items-start mb-2 pt-1"><h3 class="text-lg font-bold text-white item-name">Canastas Old Clothes</h3><span class="text-pink-400 font-black text-lg">$21.500</span></div>
-          <p class="text-slate-400 text-xs leading-relaxed mb-4">Crujientes canastas de patacón rellenas de ropa vieja desmechada, salteada con hogao casero.</p>
+          <p class="text-slate-400 text-xs leading-relaxed mb-4">Crujientes canastas de patacón rellenas de ropa vieja desmechada, salteada con hogao casero y toque tradicional.</p>
           <button onclick="addToCart('Canastas Old Clothes', 21500)" class="w-full bg-pink-600 hover:bg-pink-500 text-white font-bold py-2 rounded-xl text-xs transition">+ Agregar ($21.500)</button>
         </div>
 
@@ -195,6 +204,54 @@
         <div class="menu-item bg-slate-900 border border-slate-800 p-5 rounded-2xl md:col-span-2 flex flex-col justify-between">
           <div><div class="flex justify-between items-start mb-2"><h3 class="text-lg font-bold text-white item-name">Salchipapa Presley</h3><span class="text-pink-400 font-black text-lg">$19.000</span></div><p class="text-slate-400 text-xs leading-relaxed mb-4">160g de papa Mc Cain, chorizo santarrosano, papa chips, queso sábana, tocineta y salsa.</p></div>
           <button onclick="addToCart('Salchipapa Presley', 19000)" class="w-full bg-slate-800 hover:bg-slate-700 text-pink-400 font-bold py-2 rounded-xl text-xs transition border border-slate-700">+ Agregar ($19.000)</button>
+        </div>
+      </div>
+
+      <!-- OTRAS ENTRADAS COMPLETA DE LA FOTO -->
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+        <div class="menu-item bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
+          <div><h4 class="text-white text-xs font-bold item-name">Nuggets de Pollo (5ud)</h4><span class="text-cyan-400 font-bold text-xs">$13.500</span></div>
+          <button onclick="addToCart('Nuggets de Pollo x5', 13500)" class="bg-slate-800 hover:bg-slate-700 text-white px-3 py-1 rounded-lg text-xs">+ Agregar</button>
+        </div>
+
+        <div class="menu-item bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
+          <div><h4 class="text-white text-xs font-bold item-name">Empanaditas de Carne (6ud)</h4><span class="text-cyan-400 font-bold text-xs">$19.500</span></div>
+          <button onclick="addToCart('Empanaditas de Carne x6', 19500)" class="bg-slate-800 hover:bg-slate-700 text-white px-3 py-1 rounded-lg text-xs">+ Agregar</button>
+        </div>
+
+        <div class="menu-item bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
+          <div><h4 class="text-white text-xs font-bold item-name">Pinchos Pollo Apanado</h4><span class="text-cyan-400 font-bold text-xs">$15.000</span></div>
+          <button onclick="addToCart('Pinchos Pollo Apanado', 15000)" class="bg-slate-800 hover:bg-slate-700 text-white px-3 py-1 rounded-lg text-xs">+ Agregar</button>
+        </div>
+
+        <div class="menu-item bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
+          <div><h4 class="text-white text-xs font-bold item-name">Dedos de Mozzarella (5ud)</h4><span class="text-cyan-400 font-bold text-xs">$14.500</span></div>
+          <button onclick="addToCart('Dedos de Mozzarella', 14500)" class="bg-slate-800 hover:bg-slate-700 text-white px-3 py-1 rounded-lg text-xs">+ Agregar</button>
+        </div>
+
+        <div class="menu-item bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
+          <div><h4 class="text-white text-xs font-bold item-name">Chicharroncitos 200g</h4><span class="text-cyan-400 font-bold text-xs">$15.000</span></div>
+          <button onclick="addToCart('Chicharroncitos 200g', 15000)" class="bg-slate-800 hover:bg-slate-700 text-white px-3 py-1 rounded-lg text-xs">+ Agregar</button>
+        </div>
+
+        <div class="menu-item bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
+          <div><h4 class="text-white text-xs font-bold item-name">Aritos de Cebolla (8ud)</h4><span class="text-cyan-400 font-bold text-xs">$15.500</span></div>
+          <button onclick="addToCart('Aritos de Cebolla', 15500)" class="bg-slate-800 hover:bg-slate-700 text-white px-3 py-1 rounded-lg text-xs">+ Agregar</button>
+        </div>
+
+        <div class="menu-item bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
+          <div><h4 class="text-white text-xs font-bold item-name">Papas Francesas</h4><span class="text-cyan-400 font-bold text-xs">$7.500</span></div>
+          <button onclick="addToCart('Papas Francesas', 7500)" class="bg-slate-800 hover:bg-slate-700 text-white px-3 py-1 rounded-lg text-xs">+ Agregar</button>
+        </div>
+
+        <div class="menu-item bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
+          <div><h4 class="text-white text-xs font-bold item-name">Papas Casco</h4><span class="text-cyan-400 font-bold text-xs">$7.500</span></div>
+          <button onclick="addToCart('Papas Casco', 7500)" class="bg-slate-800 hover:bg-slate-700 text-white px-3 py-1 rounded-lg text-xs">+ Agregar</button>
+        </div>
+
+        <div class="menu-item bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
+          <div><h4 class="text-white text-xs font-bold item-name">Queso Cheddar Fundido</h4><span class="text-cyan-400 font-bold text-xs">$10.000</span></div>
+          <button onclick="addToCart('Queso Cheddar Fundido', 10000)" class="bg-slate-800 hover:bg-slate-700 text-white px-3 py-1 rounded-lg text-xs">+ Agregar</button>
         </div>
       </div>
     </section>
@@ -234,33 +291,175 @@
           <div><div class="flex justify-between items-center"><h4 class="font-bold text-white item-name">Marilyn Monroe (TOP 3)</h4><span class="text-pink-400 font-black">$33.000</span></div><p class="text-slate-400 text-xs mt-1 mb-3">Vodka, sandía, cereza, soda y borde azucarado.</p></div>
           <button onclick="addToCart('Cóctel Marilyn Monroe', 33000)" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-1.5 rounded-lg text-xs transition">+ Agregar</button>
         </div>
+        <div class="menu-item bg-slate-900 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
+          <div><div class="flex justify-between items-center"><h4 class="font-bold text-white item-name">Electric Cadillac (TOP 4)</h4><span class="text-pink-400 font-black">$31.000</span></div><p class="text-slate-400 text-xs mt-1 mb-3">Vodka, whisky, cereza, cítricos y azul electrizante.</p></div>
+          <button onclick="addToCart('Cóctel Electric Cadillac', 31000)" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-1.5 rounded-lg text-xs transition">+ Agregar</button>
+        </div>
+        <div class="menu-item bg-slate-900 p-4 rounded-xl border border-slate-800 flex flex-col justify-between sm:col-span-2 md:col-span-1">
+          <div><div class="flex justify-between items-center"><h4 class="font-bold text-white item-name">Sunset Retro (TOP 5)</h4><span class="text-pink-400 font-black">$34.000</span></div><p class="text-slate-400 text-xs mt-1 mb-3">Frozen de mango con vodka y whisky, maracuyá y toque picante.</p></div>
+          <button onclick="addToCart('Cóctel Sunset Retro', 34000)" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-1.5 rounded-lg text-xs transition">+ Agregar</button>
+        </div>
       </div>
     </section>
 
-    <!-- 🥤 BEBIDAS DE LA CASA & SODAS -->
+    <!-- 🥤 BEBIDAS DE LA CASA & SODAS COMPLETAS -->
     <section id="bebidas" class="menu-section">
       <div class="border-b border-pink-500/30 pb-2 mb-6">
         <h2 class="text-2xl font-black text-pink-500 uppercase tracking-wide flex items-center gap-2"><i class="fa-solid fa-whiskey-glass text-cyan-400"></i> Bebidas de la Casa & Sodas Especiales</h2>
       </div>
-      <div class="grid sm:grid-cols-3 gap-4 mb-6">
+
+      <!-- ESPECIALIDADES DESTACADAS -->
+      <h3 class="text-xs font-bold text-cyan-400 uppercase tracking-widest mb-3">⭐ Especialidades Recomendadas</h3>
+      <div class="grid sm:grid-cols-3 gap-4 mb-8">
         <div class="menu-item bg-slate-900 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
-          <div><div class="flex justify-between items-center mb-1"><h4 class="font-bold text-white item-name">Explosión Roger's</h4><span class="text-pink-400 font-black text-sm">$13.800</span></div><p class="text-slate-400 text-xs mb-3">Maracuyá, mango y hierbabuena.</p></div>
+          <div><div class="flex justify-between items-center mb-1"><h4 class="font-bold text-white item-name">Explosión Roger's</h4><span class="text-pink-400 font-black text-sm">$13.800</span></div><p class="text-slate-400 text-xs mb-3">TOP 1 Recomendado: Maracuyá, mango y hierbabuena.</p></div>
           <button onclick="addToCart('Explosión Roger\'s', 13800)" class="w-full bg-slate-800 hover:bg-slate-700 text-pink-400 font-bold py-1.5 rounded-lg text-xs transition border border-slate-700">+ $13.800</button>
         </div>
+
         <div class="menu-item bg-slate-900 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
-          <div><div class="flex justify-between items-center mb-1"><h4 class="font-bold text-white item-name">Limonada de Coco</h4><span class="text-pink-400 font-black text-sm">$15.000</span></div><p class="text-slate-400 text-xs mb-3">Cremosa con coco natural y limón.</p></div>
+          <div><div class="flex justify-between items-center mb-1"><h4 class="font-bold text-white item-name">Limonada de Coco</h4><span class="text-pink-400 font-black text-sm">$15.000</span></div><p class="text-slate-400 text-xs mb-3">TOP 2: Cremosa con coco natural y limón.</p></div>
           <button onclick="addToCart('Limonada de Coco', 15000)" class="w-full bg-slate-800 hover:bg-slate-700 text-pink-400 font-bold py-1.5 rounded-lg text-xs transition border border-slate-700">+ $15.000</button>
         </div>
+
         <div class="menu-item bg-slate-900 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
-          <div><div class="flex justify-between items-center mb-1"><h4 class="font-bold text-white item-name">Piña Colada</h4><span class="text-pink-400 font-black text-sm">$13.800</span></div><p class="text-slate-400 text-xs mb-3">Bebida tropical suave.</p></div>
+          <div><div class="flex justify-between items-center mb-1"><h4 class="font-bold text-white item-name">Piña Colada</h4><span class="text-pink-400 font-black text-sm">$13.800</span></div><p class="text-slate-400 text-xs mb-3">TOP 3: Bebida tropical dulce y suave.</p></div>
           <button onclick="addToCart('Piña Colada', 13800)" class="w-full bg-slate-800 hover:bg-slate-700 text-pink-400 font-bold py-1.5 rounded-lg text-xs transition border border-slate-700">+ $13.800</button>
+        </div>
+      </div>
+
+      <!-- SODAS ESPECIALES -->
+      <h3 class="text-xs font-bold text-cyan-400 uppercase tracking-widest mb-3">🍹 Sodas Especiales Roger's</h3>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        <div class="menu-item bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex flex-col justify-between">
+          <div><h4 class="font-bold text-white text-xs item-name">Rocket Sandía (TOP 1)</h4><p class="text-slate-400 text-[10px] mt-0.5">Soda de sandía con perlas de manzana verde.</p></div>
+          <button onclick="addToCart('Soda Rocket Sandía', 16500)" class="mt-2 w-full bg-slate-800 hover:bg-slate-700 text-cyan-400 font-bold py-1 rounded text-xs">+ $16.500</button>
+        </div>
+
+        <div class="menu-item bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex flex-col justify-between">
+          <div><h4 class="font-bold text-white text-xs item-name">Pink Lychee</h4><p class="text-slate-400 text-[10px] mt-0.5">Soda de lychee con fruta natural.</p></div>
+          <button onclick="addToCart('Soda Pink Lychee', 16500)" class="mt-2 w-full bg-slate-800 hover:bg-slate-700 text-cyan-400 font-bold py-1 rounded text-xs">+ $16.500</button>
+        </div>
+
+        <div class="menu-item bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex flex-col justify-between">
+          <div><h4 class="font-bold text-white text-xs item-name">Sunset Maracuyá</h4><p class="text-slate-400 text-[10px] mt-0.5">Soda de maracuyá con perlas.</p></div>
+          <button onclick="addToCart('Soda Sunset Maracuyá', 16500)" class="mt-2 w-full bg-slate-800 hover:bg-slate-700 text-cyan-400 font-bold py-1 rounded text-xs">+ $16.500</button>
+        </div>
+
+        <div class="menu-item bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex flex-col justify-between">
+          <div><h4 class="font-bold text-white text-xs item-name">Blue Pop (TOP 2)</h4><p class="text-slate-400 text-[10px] mt-0.5">Soda azul cítrica y vibrante.</p></div>
+          <button onclick="addToCart('Soda Blue Pop', 16500)" class="mt-2 w-full bg-slate-800 hover:bg-slate-700 text-cyan-400 font-bold py-1 rounded text-xs">+ $16.500</button>
+        </div>
+      </div>
+
+      <!-- LIMONADAS Y JUGOS -->
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+          <h4 class="font-bold text-pink-400 text-xs uppercase tracking-widest mb-3">🍋 Otras Limonadas</h4>
+          <div class="space-y-2">
+            <div class="menu-item flex justify-between items-center text-xs">
+              <span class="text-white item-name">Limonada Cerezada</span>
+              <button onclick="addToCart('Limonada Cerezada', 15000)" class="bg-slate-800 hover:bg-slate-700 text-pink-400 font-bold px-2.5 py-1 rounded">+ $15.000</button>
+            </div>
+            <div class="menu-item flex justify-between items-center text-xs">
+              <span class="text-white item-name">Limonada Natural</span>
+              <button onclick="addToCart('Limonada Natural', 7500)" class="bg-slate-800 hover:bg-slate-700 text-pink-400 font-bold px-2.5 py-1 rounded">+ $7.500</button>
+            </div>
+            <div class="menu-item flex justify-between items-center text-xs">
+              <span class="text-white item-name">Limonada Hierbabuena</span>
+              <button onclick="addToCart('Limonada Hierbabuena', 9200)" class="bg-slate-800 hover:bg-slate-700 text-pink-400 font-bold px-2.5 py-1 rounded">+ $9.200</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+          <h4 class="font-bold text-cyan-400 text-xs uppercase tracking-widest mb-1">🍓 Jugos Naturales</h4>
+          <p class="text-slate-400 text-[10px] mb-3">Sabores: Fresa, Mora, Lulo, Guanábana</p>
+          <div class="space-y-2">
+            <div class="menu-item flex justify-between items-center text-xs">
+              <span class="text-white item-name">Jugo Natural en Agua</span>
+              <button onclick="addToCart('Jugo Natural en Agua', 8000)" class="bg-slate-800 hover:bg-slate-700 text-cyan-400 font-bold px-2.5 py-1 rounded">+ $8.000</button>
+            </div>
+            <div class="menu-item flex justify-between items-center text-xs">
+              <span class="text-white item-name">Jugo Natural en Leche</span>
+              <button onclick="addToCart('Jugo Natural en Leche', 10500)" class="bg-slate-800 hover:bg-slate-700 text-cyan-400 font-bold px-2.5 py-1 rounded">+ $10.500</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🍺 SECCIÓN: CERVEZAS Y GASEOSAS -->
+    <section id="cervezas" class="menu-section">
+      <div class="border-b border-cyan-500/30 pb-2 mb-6">
+        <h2 class="text-2xl font-black text-cyan-400 uppercase tracking-wide flex items-center gap-2">
+          <i class="fa-solid fa-beer-mug-empty text-pink-500"></i> Cervezas & Gaseosas
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <!-- CERVEZAS -->
+        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+          <h4 class="font-bold text-white text-xs uppercase tracking-widest mb-3 flex items-center gap-2"><i class="fa-solid fa-beer text-amber-400"></i> Cervezas Bien Frías</h4>
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <div class="menu-item bg-slate-800/60 p-2 rounded-lg border border-slate-700/50 flex flex-col justify-between">
+              <div><p class="font-bold text-white item-name">Poker</p><p class="text-pink-400 font-black">$5.500</p></div>
+              <button onclick="addToCart('Cerveza Poker', 5500)" class="mt-1 bg-slate-800 hover:bg-slate-700 text-white font-bold py-0.5 rounded text-[10px]">+ Agregar</button>
+            </div>
+            <div class="menu-item bg-slate-800/60 p-2 rounded-lg border border-slate-700/50 flex flex-col justify-between">
+              <div><p class="font-bold text-white item-name">Águila</p><p class="text-pink-400 font-black">$5.500</p></div>
+              <button onclick="addToCart('Cerveza Águila', 5500)" class="mt-1 bg-slate-800 hover:bg-slate-700 text-white font-bold py-0.5 rounded text-[10px]">+ Agregar</button>
+            </div>
+            <div class="menu-item bg-slate-800/60 p-2 rounded-lg border border-slate-700/50 flex flex-col justify-between">
+              <div><p class="font-bold text-white item-name">Coronita</p><p class="text-pink-400 font-black">$7.500</p></div>
+              <button onclick="addToCart('Cerveza Coronita', 7500)" class="mt-1 bg-slate-800 hover:bg-slate-700 text-white font-bold py-0.5 rounded text-[10px]">+ Agregar</button>
+            </div>
+            <div class="menu-item bg-slate-800/60 p-2 rounded-lg border border-slate-700/50 flex flex-col justify-between">
+              <div><p class="font-bold text-white item-name">Club Colombia</p><p class="text-pink-400 font-black">$7.500</p></div>
+              <button onclick="addToCart('Cerveza Club Colombia', 7500)" class="mt-1 bg-slate-800 hover:bg-slate-700 text-white font-bold py-0.5 rounded text-[10px]">+ Agregar</button>
+            </div>
+            <div class="menu-item bg-slate-800/60 p-2 rounded-lg border border-slate-700/50 flex flex-col justify-between">
+              <div><p class="font-bold text-white item-name">Corona</p><p class="text-pink-400 font-black">$12.000</p></div>
+              <button onclick="addToCart('Cerveza Corona', 12000)" class="mt-1 bg-slate-800 hover:bg-slate-700 text-white font-bold py-0.5 rounded text-[10px]">+ Agregar</button>
+            </div>
+            <div class="menu-item bg-slate-800/60 p-2 rounded-lg border border-slate-700/50 flex flex-col justify-between">
+              <div><p class="font-bold text-white item-name">Heineken</p><p class="text-pink-400 font-black">$5.000</p></div>
+              <button onclick="addToCart('Cerveza Heineken', 5000)" class="mt-1 bg-slate-800 hover:bg-slate-700 text-white font-bold py-0.5 rounded text-[10px]">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- GASEOSAS -->
+        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+          <h4 class="font-bold text-white text-xs uppercase tracking-widest mb-3 flex items-center gap-2"><i class="fa-solid fa-bottle-water text-cyan-400"></i> Gaseosas & Refrescos</h4>
+          <div class="space-y-2 text-xs">
+            <div class="menu-item flex justify-between items-center bg-slate-800/60 p-2 rounded-lg">
+              <span class="text-white item-name">Coca-Cola Personal</span>
+              <button onclick="addToCart('Coca-Cola Personal', 5800)" class="bg-slate-800 hover:bg-slate-700 text-cyan-400 font-bold px-2.5 py-1 rounded">+ $5.800</button>
+            </div>
+            <div class="menu-item flex justify-between items-center bg-slate-800/60 p-2 rounded-lg">
+              <span class="text-white item-name">Sprite Personal</span>
+              <button onclick="addToCart('Sprite Personal', 5300)" class="bg-slate-800 hover:bg-slate-700 text-cyan-400 font-bold px-2.5 py-1 rounded">+ $5.300</button>
+            </div>
+            <div class="menu-item flex justify-between items-center bg-slate-800/60 p-2 rounded-lg">
+              <span class="text-white item-name">Quatro Personal</span>
+              <button onclick="addToCart('Quatro Personal', 5300)" class="bg-slate-800 hover:bg-slate-700 text-cyan-400 font-bold px-2.5 py-1 rounded">+ $5.300</button>
+            </div>
+            <div class="menu-item flex justify-between items-center bg-slate-800/60 p-2 rounded-lg">
+              <span class="text-white item-name">Gaseosa 1.5 L</span>
+              <button onclick="addToCart('Gaseosa 1.5L', 12900)" class="bg-slate-800 hover:bg-slate-700 text-cyan-400 font-bold px-2.5 py-1 rounded">+ $12.900</button>
+            </div>
+            <div class="menu-item flex justify-between items-center bg-slate-800/60 p-2 rounded-lg">
+              <span class="text-white item-name">Agua Embotellada</span>
+              <button onclick="addToCart('Agua Embotellada', 3500)" class="bg-slate-800 hover:bg-slate-700 text-cyan-400 font-bold px-2.5 py-1 rounded">+ $3.500</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- BARRA FLOTANTE CARRITO -->
+  <!-- BARRA FLOTANTE DE CARRITO Y PEDIDO -->
   <div class="fixed bottom-0 left-0 w-full bg-slate-900/95 border-t border-slate-800 p-4 backdrop-blur-lg z-50">
     <div class="max-w-4xl mx-auto flex justify-between items-center gap-4">
       <div>
@@ -274,7 +473,7 @@
     </div>
   </div>
 
-  <!-- MODAL CARRITO -->
+  <!-- MODAL RESUMEN DE PEDIDO -->
   <div id="cartModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
     <div class="bg-slate-900 border border-slate-800 w-full max-w-lg rounded-t-2xl sm:rounded-2xl max-h-[90vh] flex flex-col overflow-hidden">
       <div class="p-4 border-b border-slate-800 flex justify-between items-center">
@@ -299,23 +498,28 @@
     </div>
   </div>
 
+  <!-- LÓGICA DE JAVASCRIPT -->
   <script>
     let cart = [];
+
     function addToCart(name, price) {
       const existing = cart.find(item => item.name === name);
       if (existing) { existing.qty++; } else { cart.push({ name, price, qty: 1 }); }
       updateCartUI();
     }
+
     function changeQty(index, delta) {
       cart[index].qty += delta;
       if (cart[index].qty <= 0) { cart.splice(index, 1); }
       updateCartUI();
     }
+
     function updateCartUI() {
       const totalCount = cart.reduce((acc, item) => acc + item.qty, 0);
       const totalPrice = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
       document.getElementById('cartCount').innerText = `${totalCount} ítems`;
       document.getElementById('cartTotal').innerText = `$${totalPrice.toLocaleString('es-CO')}`;
+
       const listContainer = document.getElementById('cartItemsList');
       if (cart.length === 0) {
         listContainer.innerHTML = `<p class="text-slate-500 text-center py-6">No has agregado nada al pedido aún.</p>`;
@@ -335,19 +539,25 @@
         `).join('');
       }
     }
+
     function openCartModal() { document.getElementById('cartModal').classList.remove('hidden'); }
     function closeCartModal() { document.getElementById('cartModal').classList.add('hidden'); }
+
     function sendOrderToWhatsApp() {
       if (cart.length === 0) { alert("Agrega al menos un ítem a tu pedido antes de enviar."); return; }
       const name = document.getElementById('clientName').value.trim() || 'Cliente';
       const address = document.getElementById('clientAddress').value.trim() || 'En el local';
       const totalPrice = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
+
       let text = `*NUEVO PEDIDO - ROGER'S DINER*%0A👤 *Cliente:* ${name}%0A📍 *Ubicación/Mesa:* ${address}%0A%0A📋 *Detalle del pedido:*%0A`;
       cart.forEach(item => { text += `• ${item.qty}x ${item.name} - *$${(item.price * item.qty).toLocaleString('es-CO')}*%0A`; });
       text += `%0A💰 *TOTAL:* *$${totalPrice.toLocaleString('es-CO')}*%0A%0A_Pedido generado desde el Menú Digital Roger's Diner_`;
+
       window.open(`https://wa.me/573215484976?text=${text}`, '_blank');
     }
+
     function scrollToCat(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }); }
+
     function filterMenu() {
       const q = document.getElementById('searchInput').value.toLowerCase();
       document.querySelectorAll('.menu-item').forEach(item => {
