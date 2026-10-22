@@ -480,20 +480,36 @@
 
   </main>
 
-  <!-- BARRA FLOTANTE DE CARRITO -->
-  <div class="fixed bottom-0 left-0 w-full bg-slate-900/95 border-t border-slate-800 p-4 backdrop-blur-lg z-50">
-    <div class="max-w-7xl mx-auto flex justify-between items-center gap-4">
-      <div>
-        <span id="cartCount" class="bg-pink-500 text-slate-950 font-black text-xs px-2.5 py-0.5 rounded-full">0 ítems</span>
-        <div id="cartTotal" class="text-lg font-black text-white">$0</div>
+  <!-- BARRA FLOTANTE CON BOTONES SEPARADOS -->
+  <div class="fixed bottom-0 left-0 w-full bg-slate-900/95 border-t border-slate-800 p-3 sm:p-4 backdrop-blur-lg z-50">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
+      
+      <!-- CONTADOR Y TOTAL -->
+      <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+        <div>
+          <span id="cartCount" class="bg-pink-500 text-slate-950 font-black text-[10px] sm:text-xs px-2.5 py-0.5 rounded-full">0 ítems</span>
+          <div id="cartTotal" class="text-base sm:text-lg font-black text-white">$0</div>
+        </div>
       </div>
-      <button onclick="openCartModal()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-black px-6 py-3 rounded-xl transition flex items-center gap-2 shadow-lg shadow-emerald-950/50">
-        <i class="fa-brands fa-whatsapp text-lg"></i>
-        <span>Ver Pedido y Enviar</span>
-      </button>
+
+      <!-- BOTONES INDEPENDIENTES -->
+      <div class="flex items-center gap-2 w-full sm:w-auto">
+        <!-- BOTÓN 1: REVISAR PEDIDO -->
+        <button onclick="openCartModal()" class="flex-1 sm:flex-none bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold px-4 py-2.5 rounded-xl border border-slate-700 transition flex items-center justify-center gap-2 text-xs sm:text-sm">
+          <i class="fa-solid fa-list-check text-pink-500"></i>
+          <span>Revisar Pedido</span>
+        </button>
+
+        <!-- BOTÓN 2: ENVIAR WHATSAPP DIRECTO -->
+        <button onclick="sendOrderToWhatsApp()" class="flex-1 sm:flex-none bg-emerald-600 hover:bg-emerald-500 text-white font-black px-5 py-2.5 rounded-xl transition flex items-center justify-center gap-2 text-xs sm:text-sm shadow-lg shadow-emerald-950/50">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>Hacer Pedido</span>
+        </button>
+      </div>
+
     </div>
   </div>
-
+  
   <!-- MODAL PEDIDO -->
   <div id="cartModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
     <div class="bg-slate-900 border border-slate-800 w-full max-w-lg rounded-t-2xl sm:rounded-2xl max-h-[90vh] flex flex-col overflow-hidden">
