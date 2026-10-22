@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roger's Diner | Menú Digital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans pb-24">
+
+  <!-- ENCABEZADO / INFORMACIÓN DEL LOCAL -->
+  <header class="bg-slate-900 border-b border-pink-500/30 sticky top-0 z-40 backdrop-blur-md bg-opacity-90">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+        <div>
+          <h1 class="text-2xl font-black text-pink-500 tracking-wider uppercase">ROGER'S DINER</h1>
+          <p class="text-xs text-cyan-400 font-semibold uppercase tracking-widest">Cócteles & Food · Good Times!</p>
+        </div>
+        
+        <!-- CONTACTO Y DIRECCIÓN -->
+        <div class="flex flex-wrap items-center gap-3 text-xs">
+          <a href="https://maps.google.com/?q=Cl.+51+Sur+%2387-18,+Bogot%C3%A1" target="_blank" class="flex items-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 px-3 py-1.5 rounded-lg border border-slate-700 transition">
+            <i class="fa-solid fa-location-dot text-pink-500"></i>
+            <span>Cl. 51 Sur #87-18, Bogotá</span>
+          </a>
+          <a href="https://wa.me/573215484976" target="_blank" class="flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3 py-1.5 rounded-lg transition">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>321 548 4976</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL DEL MENÚ -->
+  <main class="max-w-4xl mx-auto px-4 py-8 space-y-10">
+
+    <!-- SECCIÓN: ENTRADAS PARA PICAR & COMPARTIR -->
+    <section>
+      <div class="border-b border-cyan-500/30 pb-2 mb-6">
+        <h2 class="text-xl font-bold text-cyan-400 uppercase tracking-wide flex items-center gap-2">
+          <i class="fa-solid fa-utensils text-pink-500"></i>
+          Para Picar & Compartir (Entradas)
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <!-- PLATILLO TOP 1 -->
+        <div class="bg-slate-900 border-2 border-pink-500/40 p-5 rounded-2xl relative">
+          <span class="absolute -top-3 left-4 bg-pink-500 text-slate-950 font-black text-xs px-2.5 py-0.5 rounded-full uppercase">
+            ⭐ TOP 1
+          </span>
+          <div class="flex justify-between items-start mb-2 pt-1">
+            <h3 class="text-lg font-bold text-white">Canastas Old Clothes</h3>
+            <span class="text-pink-400 font-black text-lg">$21.500</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed mb-3">
+            Crujientes canastas de patacón rellenas de ropa vieja desmechada y jugosa, salteada con hogao casero y un toque de sabor tradicional. ¡Ideal para compartir!
+          </p>
+        </div>
+
+        <!-- SALCHIPAPA MONRROE -->
+        <div class="bg-slate-900 border border-slate-800 p-5 rounded-2xl">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-lg font-bold text-white">Salchipapa Monrroe</h3>
+            <span class="text-pink-400 font-black text-lg">$19.000</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed mb-3">
+            Explosión de sabor estilo diner: 160g de papa Mc Cain, salchicha americana Zenu, papa chips, queso sábana, tocineta en trocitos y salsa.
+          </p>
+        </div>
+
+        <!-- SALCHIPAPA PRESLEY -->
+        <div class="bg-slate-900 border border-slate-800 p-5 rounded-2xl md:col-span-2">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-lg font-bold text-white">Salchipapa Presley</h3>
+            <span class="text-pink-400 font-black text-lg">$19.000</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed mb-3">
+            Un clásico elevado al siguiente nivel: 160g de papa Mc Cain, chorizo santarrosano, papa chips, queso sábana, tocineta en trocitos y salsa.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: OTRAS ENTRADAS -->
+    <section>
+      <div class="border-b border-cyan-500/30 pb-2 mb-6">
+        <h2 class="text-xl font-bold text-cyan-400 uppercase tracking-wide flex items-center gap-2">
+          <i class="fa-solid fa-bowl-food text-pink-500"></i>
+          Otras Entradas
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-3 text-sm">
+        <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
+          <span class="text-slate-200">Nuggets de Pollo (5 unidades)</span>
+          <span class="text-cyan-400 font-bold">$13.500</span>
+        </div>
+
+        <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
+          <span class="text-slate-200">Empanaditas de Carne (6 unidades)</span>
+          <span class="text-cyan-400 font-bold">$19.500</span>
+        </div>
+
+        <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
+          <span class="text-slate-200">Pinchos de Pollo Apanado</span>
+          <span class="text-cyan-400 font-bold">$15.000</span>
+        </div>
+
+        <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
+          <span class="text-slate-200">Dedos de Mozzarella</span>
+          <span class="text-cyan-400 font-bold">$14.500</span>
+        </div>
+
+        <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
+          <span class="text-slate-200">Chicharroncitos</span>
+          <span class="text-cyan-400 font-bold">$15.000</span>
+        </div>
+
+        <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex justify-between items-center">
+          <span class="text-slate-200">Aros de Cebolla</span>
+          <span class="text-cyan-400 font-bold">$15.500</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: ACOMPAÑA TU PEDIDO -->
+    <section>
+      <div class="border-b border-cyan-500/30 pb-2 mb-6">
+        <h2 class="text-xl font-bold text-cyan-400 uppercase tracking-wide flex items-center gap-2">
+          <i class="fa-solid fa-cookie text-pink-500"></i>
+          Acompaña Tu Pedido
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-3 text-sm">
+        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 text-center">
+          <h4 class="text-white font-semibold">Papas Francesas</h4>
+          <p class="text-pink-400 font-black text-base mt-1">$7.500</p>
+        </div>
+
+        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 text-center">
+          <h4 class="text-white font-semibold">Papas Casco</h4>
+          <p class="text-pink-400 font-black text-base mt-1">$7.500</p>
+        </div>
+
+        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 text-center">
+          <h4 class="text-white font-semibold">Queso Cheddar Fundido</h4>
+          <p class="text-pink-400 font-black text-base mt-1">$10.000</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: EXTRAS -->
+    <section>
+      <div class="bg-slate-900/60 p-5 rounded-2xl border border-slate-800">
+        <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-plus text-cyan-400"></i> Extras
+        </h3>
+        <div class="flex flex-wrap gap-4 text-sm">
+          <div class="bg-slate-800 px-4 py-2 rounded-xl border border-slate-700 flex items-center gap-3">
+            <span class="text-slate-300">Doble Tocineta Extra</span>
+            <span class="text-pink-400 font-bold">$3.000</span>
+          </div>
+          <div class="bg-slate-800 px-4 py-2 rounded-xl border border-slate-700 flex items-center gap-3">
+            <span class="text-slate-300">Huevo Frito Extra</span>
+            <span class="text-pink-400 font-bold">$1.500</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA FIXO PARA PEDIDOS -->
+  <footer class="fixed bottom-0 left-0 w-full bg-slate-900 border-t border-slate-800 p-4 z-50">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
+      <div class="text-xs text-slate-400 text-center sm:text-left">
+        <p class="font-bold text-white">📍 Cl. 51 Sur #87-18, Bogotá</p>
+        <p>Atención y pedidos por WhatsApp</p>
+      </div>
+      <a href="https://wa.me/573215484976?text=Hola%20Roger%27s%20Diner,%20quiero%20hacer%20un%20pedido" target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold px-6 py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-900/40">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span>Hacer Pedido al 321 548 4976</span>
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
